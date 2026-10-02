@@ -1,0 +1,88 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+    <div class="row">
+    <div class="col-8 offset-2">
+        <br><br>
+    <h3>Create new listing</h3>
+    <form method = "post"
+          action = "/listings"
+          novalidate
+          class="needs-validation"
+    >
+
+    <div class="mb-3">
+    <label for="title" class="form-label">Title</label>
+    <input class="form-control" 
+     name = "listing[title]" 
+     placeholder = "Add a catchy title" 
+     type = "text"
+     required >
+     <div class="valid-feedback">Title Looks good</div>
+    </div>
+
+    <div class="mb-3">
+    <label for="description" class="form-label">Description</label>
+    <textarea class="form-control"  
+    name = "listing[description]" 
+    placeholder = "enter description" 
+    type = "text" 
+    required></textarea>
+    <div class="invalid-feedback">Please give a short description</div>
+    </div>
+
+    <div class="mb-3">
+    <label for="image" 
+    class="form-label">Image Link/URL</label>
+    <input class="form-control" 
+     name = "listing[image]" 
+     placeholder = "enter image URL" 
+     type = "text" 
+     >
+    </div>  
+
+    <div class="row">
+    <div class="mb-3 col-md-4">
+    <label for="price" 
+    class="form-label">Price</label>
+    <input class="form-control"  
+    name = "listing[price]" 
+    placeholder = "1200" 
+    type = "number" 
+    required>
+    <div class="invalid-feedback">Price should be valid</div>
+    </div>
+
+    <div class="mb-3 col-md-8">
+      <label 
+        for="county" 
+        class="form-label">Country
+      </label>
+    <input 
+        class="form-control"  
+        name = "listing[country]" 
+        placeholder = "India" 
+        type = "text" 
+        required>
+        <div class="invalid-feedback">Country should be valid</div>
+    </div>
+    </div>
+
+    <div class="mb-3">
+    <label for="location" 
+    class="form-label">Location</label>
+    <input class="form-control"  
+    name = "listing[location]" 
+    placeholder = "Jabalpur, Madhya Pradesh" 
+    type = "text" 
+    required>
+    <div class="invalid-feedback">Loaction should be valid</div>
+    </div>
+    
+    <button class="btn mb-3 btn-dark add-btn">ADD</button>
+    <br>
+    <br>
+    </form>
+
+    </div>
+    </div>
+</body>
